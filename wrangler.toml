@@ -1,15 +1,15 @@
 # TODO: CHANGE NAME
-name = "worker_template"
+name = "subgen2"
 type = "webpack"
 account_id = " [ env.CF_ACCOUNT_ID ] "
-workers_dev = true
-route = ""
+workers_dev = false
+route = "workers.chiba.bar/subgen2/*"
 zone_id = " [ env.CF_ZONE_ID ] "
 vars = { ENVIROMENT = "dev" }
 
-[env.production]
-vars = { ENVIROMENT = "production" }
-routes = [
-  # TODO: CHANGE route
-  "workers.chiba.bar/worker_template/*"
-]
+kv_namespaces = [
+  { binding = "SubGen", preview_id = "6b65cbc7824948dd9f1acab94b216537", id = "bc7f2f618e1a471abf5ccafba08b9460" }
+  ]
+
+[triggers]
+crons = ["*/5 * * * *"]
