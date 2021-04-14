@@ -8,7 +8,6 @@ async function getSub(request) {
     headers: {
       'encode': 'utf-8',
       'content-encoding': 'gzip'
-
     }
   }
   // Last part of the url is the key
