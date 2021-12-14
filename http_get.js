@@ -29,8 +29,8 @@ async function http_get(url) {
     const result = await fetch(url)
     const response = await gatherResponse(result)
     const { headers } = result.headers
-    // console.log(headers)
-    //console.log(response)
+
+  
     return response
   }
   catch (error) {
